@@ -1,0 +1,81 @@
+OGG (1.1.4)
+	Monty <monty@xiph.org>
+	and the rest of the Xiph.Org Foundation
+
+VORBIS (1.2.3)
+	Monty <monty@xiph.org>
+	and the rest of the Xiph.Org Foundation
+
+FLAC (1.2.1)
+	FLAC (http://flac.sourceforge.net/) is an Open Source lossless audio
+	codec developed by Josh Coalson <jcoalson@users.sourceforge.net>.
+
+	Other major contributors and their contributions:
+	"Andrey Astafiev" <andrei@tvcell.ru> * Russian translation of the HTML documentation
+	"Miroslav Lichvar" <lichvarm@phoenix.inf.upol.cz> * IA-32 assembly versions of several libFLAC routines
+	"Brady Patterson" <bpat@users.sourceforge.net> * AIFF file support, PPC assembly versions of libFLAC routines
+	"Daisuke Shimamura" <Daisuke_Shimamura@nifty.com> * i18n support in the XMMS plugin
+	"X-Fixer" <x-fixer@narod.ru> * Configuration system, tag editing, and file info in the Winamp2 plugin
+	"Matt Zimmerman" <mdz@debian.org> * Libtool/autoconf/automake make system, flac man page
+
+LIBSNDFILE (1.0.24)
+	The main author of libsndfile is Erik de Castro Lopo <erikd@mega-nerd.com>
+	apart from code in the following directories:
+	- src/GSM610 : Written by Jutta Degener <jutta@cs.tu-berlin.de> and Carsten
+   	Bormann <cabo@cs.tu-berlin.de>. They should not be contacted in relation to
+   	libsndfile or the GSM 6.10 code that is part of libsndfile. Their original
+   	code can be found at:
+	       http://kbs.cs.tu-berlin.de/~jutta/toast.html
+	- src/G72x : Released by Sun Microsystems, Inc. to the public domain. Minor
+	modifications were required to integrate these files into libsndfile. The
+	changes are listed in src/G72x/ChangeLog.
+
+TagLib (1.7.0, patched for WAV files "id3 " chunk)
+	developer.kde.org/~wheeler/taglib.html
+
+	Scott Wheeler <wheeler@kde.org> Author, maintainer
+	Ismael Orenstein <orenstein@kde.org>  Xing header implementation
+	Allan Sandfeld Jensen <kde@carewolf.org>  FLAC metadata implementation
+	Teemu Tervo <teemu.tervo@gmx.net> Numerous bug reports and fixes
+
+HIDRemote (1.1.1)
+	Created by Felix Schwarz on 06.04.07
+	Copyright (c) 2007-2009 IOSPIRIT GmbH (http://www.iospirit.com/)
+
+Sparkle (1.5b6)
+	Andy Matuschak
+
+
+******* Build parameters used *******
+OGG:
+./configure --host=x86_64-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+./configure --host=i386-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+./configure --host=powerpc-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+VORBIS:
+./configure --host=x86_64-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" --with-ogg-libraries=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4 --with-ogg-includes=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4/include
+
+./configure --host=i386-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" --with-ogg-libraries=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4 --with-ogg-includes=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4/include
+
+./configure --host=powerpc-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" --with-ogg-libraries=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4 --with-ogg-includes=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4/include
+
+FLAC:
+./configure --disable-shared --enable-sse --disable-doxygen-docs --disable-xmms-plugin --with-ogg-libraries=/Users/damien/Documents/Dev/blender2.5/svnroot/lib/darwin-9.x.universal/ffmpeg/lib --with-ogg-includes=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4/include --build=x86_64-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch x86_64 -mfpmath=sse -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+./configure --disable-shared --enable-sse --disable-doxygen-docs --disable-xmms-plugin --disable-asm-optimizations --with-ogg-libraries=/Users/damien/Documents/Dev/blender2.5/svnroot/lib/darwin-9.x.universal/ffmpeg/lib --with-ogg-includes=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4/include --build=i386-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch i386 -mfpmath=sse -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+./configure --disable-shared --enable-altivec --disable-doxygen-docs --disable-xmms-plugin --with-ogg-libraries=/Users/damien/Documents/Dev/blender2.5/svnroot/lib/darwin-9.x.universal/ffmpeg/lib --with-ogg-includes=/Users/damien/Documents/Dev/blender2.5/sources/libogg-1.1.4/include --build=powerpc-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+LIBSNDFILE:
+./configure --disable-external-libs --disable-sqlite --disable-static --enable-shared CC="clang" CFLAGS="-arch x86_64 -march=core2" CXXFLAGS="-arch x86_64 -march=core2" LDFLAGS="-arch x86_64 -march=core2"
+
+./configure --disable-external-libs --disable-sqlite --disable-static --enable-shared CC="clang" CFLAGS="-arch i386 -march=prescott" CXXFLAGS="-arch i386 -march=prescott" LDFLAGS="-arch i386 -march=prescott"
+
+TagLib:
+./configure --enable-static --enable-mp4 --enable-asf --build=x86_64-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch x86_64 -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch x86_64 -march=core2 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch x86_64 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+./configure --enable-static --enable-mp4 --enable-asf --build=i386-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch i386 -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch i386 -march=prescott -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch i386 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
+
+./configure --enable-static --enable-mp4 --enable-asf --build=powerpc-apple-darwin9.8.0 CC="gcc-4.2" CFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" CXXFLAGS="-arch ppc -mcpu=powerpc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5" LDFLAGS="-arch ppc -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
