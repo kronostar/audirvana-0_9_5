@@ -72,7 +72,6 @@
 		6D7CDEFB131A942A0054F8FA /* Black_PlayerWin_stop_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7CDEE8131A942A0054F8FA /* Black_PlayerWin_stop_pressed.png */; };
 		6D7CDEFC131A942A0054F8FA /* Black_PlayerWin_volume_knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7CDEE9131A942A0054F8FA /* Black_PlayerWin_volume_knob.png */; };
 		6D7CDEFD131A942A0054F8FA /* Black_PlayerWin_volume_slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7CDEEA131A942A0054F8FA /* Black_PlayerWin_volume_slider.png */; };
-		6D7F6491136C3BDC000F1C27 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF17B3B1269857800051593 /* Preferences.xib */; };
 		6D7F6495136C3DAA000F1C27 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F6493136C3DA5000F1C27 /* Localizable.strings */; };
 		6D7FDFC11336965300756111 /* UserPrefsGeneral.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D7FDFC01336965300756111 /* UserPrefsGeneral.png */; };
 		6D8B06CF1319730C00D72BDC /* Greyscale Basic Regular.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6D8B06C2131972C000D72BDC /* Greyscale Basic Regular.ttf */; };
@@ -731,6 +730,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Free Software";
 			};
 			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Audirvana" */;
@@ -826,7 +826,6 @@
 				6DD20315133FD3F90054849C /* ButtonShuffle_on.png in Resources */,
 				6DD20318133FD4990054849C /* Silver_PlayerWin_shuffle_off.png in Resources */,
 				6DD20319133FD4990054849C /* Silver_PlayerWin_shuffle_on.png in Resources */,
-				6D7F6491136C3BDC000F1C27 /* Preferences.xib in Resources */,
 				6D7F6495136C3DAA000F1C27 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,7 +988,6 @@
 					"\"$(SRCROOT)/extern\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1057,8 +1055,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
@@ -1085,8 +1082,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
@@ -1104,7 +1100,7 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1121,7 +1117,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1143,7 +1139,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = Distribution;
 				ZERO_LINK = NO;
 			};
