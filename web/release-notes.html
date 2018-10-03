@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+</head>
+<body>
+
+<a name=version-0.9.5>
+<center>
+<p>Audirvana is <b>open source, free software and will remain free</b>.
+<br><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6PZANKDHSN358">
+<img src="https://www.paypal.com/en_US/FR/i/btn/btn_donateCC_LG.gif"></a>
+<br>Thanks a lot for helping me to make it better and better !</p>
+<br>
+</center>
+
+<b>Release 0.9.5</b>
+<ul><li>Increase user configurable latency delay to allow DACs to sync sample rate to 5s max. Useful for DACs connected behind bridges and some specific devices.
+<br>Also implemented this same latency when starting playback.</li>
+    <li>Fix to suppress stuttering when changing sample rate for first track on some devices</li>
+</ul>
+
+<br>
+<a name=version-0.9.4>
+<b>Release 0.9.4</b>
+<ul><li>Bug Fixes:
+    <ul><li>Multi-channel devices, multiple instances better handling</li>
+        <li>Correctly continuing playback to appended files to playlist when adding one at a time</li>
+        <li>Other bug fixes</li>
+    </ul></li>
+</ul>
+
+<br>
+<a name=version-0.9.3>
+<b>Release 0.9.3</b>
+<ul><li>Bug Fixes:
+        <ul><li>Multi-channel devices, multiple instances better handling</li>
+            <li>Media key "previous" behavior fix</li>
+            <li>Seek backwards when using CoreAudio upsampling with multi-chunk load hang fix</li>
+            <li>Other small bug fixes</li>
+        </ul></li>
+</ul>
+
+<br>
+<a name=version-0.9.2>
+<b>Release 0.9.2</b>
+<ul><li>Integer Mode for single channel multi-streams devices (Thanks to B.J. Buchalter from Metric Halo)</li>
+    <li>Media keys use can be completely disabled (user prefs)</li>
+    <li>Application icon changing when selecting new skin</li>
+    <li>Bug Fixes:
+        <ul><li>Autosaved playlist no more loaded when Audirvana opened with a track or a playlist</li>
+            <li>Handle nicely devices with not all integer streams in 24bit</li>
+            <li>Album art loader looks for any .jpg if none found in track and no folder.jpg exists</li>
+        </ul></li>
+</ul>
+
+<br>
+<a name=version-0.9.1>
+<b>Release 0.9.1</b>
+<ul><li>Integer Mode is now working with XMOS based (USB class 2) devices
+<br>Thanks to Pat Wayne from AMR who made it possible by sending me the hardware needed for testing.</li>
+    <li>German localization, thanks to Roman Gramse</li>
+    <li>Bug Fixes:
+        <ul><li>Fix playback stopping before end of long tracks loaded in more than three chunks</li>
+            <li>Fix crash when loading very large playlist composed of mainly ALAC tracks</li>
+            <li>Fix display not updated issue when seeking previous in pause mode</li>
+        </ul></li>
+</ul>
+
+<br>
+<a name=version-0.9.0>
+<b>Release 0.9.0</b>
+<ul><li>Keyboard media keys for controlling playback, and optionally volume</li>
+    <li>French localization</li>
+    <li>Use Cmd+O shortcut for adding tracks to playlist, Cmd+Shift+O for opening a playlist</li>
+    <li>Bug Fixes:
+        <ul><li>Only tracks opened/dropped from Finder folders are sorted by name, removing issues for iTunes dropped ones</li>
+            <li>Fix issue when adding files to a playlist being populated</li>
+            <li>Other playlist and stability bug fixes</li>
+        </ul></li>
+</ul>
+
+<br>
+<a name=version-0.8.3>
+<b>Release 0.8.3</b>
+<ul><li>Compile chain optimization for best sound quality: use GCC for realtime playback routine, LLVM for other modules</li>
+<li>User prefs implementation rationalization. <strong>You need to reselect the sample rate converter, and the bridge settings (max spl rate, latency)</strong></li>
+<li>Files added to playlist are sorted by name</li>
+<li>Strengthen Integer Mode stability (Delay playback start until first chunk of audio buffer data is loaded)</li>
+<li>Bug Fixes:
+<ul><li>Adjust track length to exact one at end of loading process, playback was sometimes not going to next track before.</li>
+<li>Fix rare occurences of FLAC load crash</li>
+<li>Various playlist fixes (appended track is played, shuffle behaviour, ...)
+<li>Fix crash with non UTF-8 metadata encodings</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.8.2>
+<b>Release 0.8.2</b>
+<ul><li>Bug Fixes:
+<ul><li>Fix user prefs crash and playback not starting for range sample rate devices like M2Tech HiFace</li>
+<li>Fix playback not starting with single track playlist</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.8.1>
+<b>Release 0.8.1</b>
+<ul><li>Special settings (in user prefs) for SPDIF bridge devices:
+<ul><li>Max sample rate limit</li>
+<li>Additional latency when switching sample rate to allow connected DAC to synchronize</li></ul></li>
+<li>Bug Fixes:
+<ul><li>Stop (reset device) when exiting Audirvana while playing</li>
+<li>Repeat mode and other playlist bug fixes</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.8.0>
+<b>Release 0.8.0</b>
+<ul><li>Shuffle playlist</li>
+<li>Repeat and shuffle settings saved between launches</li>
+<li>llvm v2.0 compiler used instead of gcc 4.2</li>
+<li>Bug Fixes:
+<ul><li>Metadata reading minor fixes (taglib update to 1.7)</li>
+<li>Potential crash when seeking inside split loaded track fix</li>
+<li>LCD numbers better readability</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.7.4>
+<b>Release 0.7.4</b>
+<ul><li>Default Audio buffers size now leaves 2.5GB RAM free to lessen mem swap occurences</li>
+<li>Minor UI updates (Thanks to Atilla Taskiran)</li>
+<li>libSndFile update to v1.0.24 (AIFF, WAV, ... loader)
+<li>Bug Fixes:
+<ul><li>Gapless playback</li>
+<li>Device identification using UID and not name. Enables to have multiple devices of same type connected
+<br><strong>You need to reselect your preferred device in the user prefs after this update</strong></li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.7.3>
+<b>Release 0.7.3</b>
+<ul><li>Playlist columns width and order are remembered between launches</li>
+<li>Added album track number column in playlist table view</li>
+<li>User Prefs toolbar icons update (Thanks to Atilla Taskiran)</li>
+<li>First track to play is the one highlighted by the playlist selection (as in iTunes)</li>
+<li>Bug Fixes:
+<ul><li>Cmd+W closes User prefs and debug windows</li>
+<li>Non-integer mode stream format selection limited to mixable but integer</li>
+<li>Correctly display duration of tracks longer than one hour</li>
+<li>Start playback when double clicking on any track in the playlist (including the first one)</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.7.2>
+<b>Release 0.7.2</b>
+<ul><li>Playlist remember feature: load upon start playlist that was automatically saved upon previous exit.
+<br>Switchable in User Prefs</li>
+<li>Show Integer Mode requires Exclusive Access in User prefs by unselecting Int mode when Hog mode in not selected</li>
+<li>Bug Fixes:
+<ul><li>Fix large playlists loading crash</li>
+<li>Limit max I/O buffer size in Integer Mode to this mode max value</li>
+<li>Restore display in highlighted color during track position seek (slider grabbed by the user)</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.7.1>
+<b>Release 0.7.1</b>
+<ul><li>Bug Fixes:
+<ul><li>Apple lossless files bitdepth is now displayed correctly</li>
+<li>Song title visible again, and darker for increased contrast</li>
+</ul></li>
+<li>Song info lines order: composer now placed just under song title</li>
+</ul>
+
+<br>
+<a name=version-0.7.0>
+<b>Release 0.7.0</b>
+<ul><li>New Player window UI design<br>2 themes available:
+<ul><li>Silver</li><li>Graphite Black</li></ul>
+Thanks to Atilla Taskiran for the UI design
+<li>Bug Fixes:
+<ul><li>WAV files id3tag metadata is now correctly read</li>
+<li>Master (physical) volume dB value is read directly from the device to ensure correct absolute value</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.6.3>
+<b>Release 0.6.3</b>
+<ul><li>Bug Fixes:
+<ul><li>Ensure selected audio stream format contains at least 2 channels to accomodate stereo</li>
+<li>Nicer device stop from integer mode</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.6.2>
+<b>Release 0.6.2</b>
+<ul><li>Bug Fixes:
+<ul><li>Integer mode: Ensure selected physical mode format is not only non-mixable, but also in integer format</li>
+<li>Fix bug giving mono sound for 16bit multichannel DACs</li>
+</ul></li>
+<li>Display error message when unable to start playing</li>
+</ul>
+
+<br>
+<a name=version-0.6.1>
+<b>Release 0.6.1</b>
+<ul><li>Bug Fixes:
+<ul><li>Sample rate mismatch when DAC was at a rate above its minimum upon startup</li>
+<li>16bit DACs have Integer Mode too now</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.6.0>
+<b>Release 0.6.0</b>
+<ul><li>New feature: Integer Mode <br>(send audio stream in native DAC format to the driver, instead of CoreAudio 32bit float intermediary format)
+<br><i>Note that not all DAC drivers support this feature</i></li>
+<li>Others:
+<ul><li>Fix small glitch at track change</li>
+<li>Add Delete menu command for deleting selected playlist tracks</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.5.4>
+<b>Release 0.5.4</b>
+<ul><li>Forced upsampling can now be limited to 4x/2x oversampling</li>
+<li>Bug Fixes:
+<ul><li>Fix playback not stopping at end of track when playlist had only one track</li>
+<li>Fix crash upon seek to another buffer on a split loaded file</li>
+<li>Still play if unable to hog device after it has been checked to be available (not hogged by another process)</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.5.3>
+<b>Release 0.5.3</b>
+<ul><li>Bug Fixes:
+<ul><li>Allocate audio buffers with low level routines to immediately free the memory regions</li>
+<li>For some track types, loading bar was still displayed even after loading was completed</li>
+</ul></li>
+</ul>
+
+<br>
+<a name=version-0.5.2>
+<b>Release 0.5.2</b>
+<ul><li>Bug Fix: Mem leak happening in some occasions on stop or track selection in playlist</li>
+</ul>
+
+<br>
+<a name=version-0.5.1>
+<b>Release 0.5.1</b>
+<ul><li>Added volume value display in dB. <i>Note that the volume control appears only if your DAC provides this feature to CoreAudio.</i></li>
+<li>Bug Fixes (playlist playing position & loading bar display)</li>
+</ul>
+
+<br>
+<a name=version-0.5.0>
+<b>Release 0.5.0</b>
+<ul><li>Transparent split load feature
+<ul><li>Enables to load tracks of any size regardless of the max allowed buffer size</li>
+    <li>Minimum buffer size relaxed to 256MB</li>
+    <li><i>Note that if you get some dropouts in the middle of a track, reducing the buffer size shall eliminate the issue.</i></li></ul></li>
+<li>Others (Delete key now removes the selected tracks in playlist, configurable autostart upon playlist drop on Audirvana icon</li>
+</ul>
+
+<br>
+<a name=version-0.4.1>
+<b>Release 0.4.1</b>
+<ul><li>Two Sample Rate Converters available
+<ul><li>Apple CoreAudio and SRC libSampleRate</li>
+    <li>5 quality levels</li>
+    <li>Configurable in <i>Audio Filters</i> user prefs pane</li></ul></li>
+<li>Bug fixes</li>
+</ul>
+
+<br>
+<a name=version-0.4.0>
+<b>Release 0.4.0</b>
+<ul><li>User preferences dialog improvements:
+<ul><li>2 tabs view</li>
+<li>unambiguous preferred device selection method</li>
+<li>active device sampling rate information</li>
+<li>max buffer information also given in track length</li>
+</ul></li></ul>
+
+<br>
+<a name=version-0.3.2>
+<b>Release 0.3.2</b>
+<ul><li>Playlist save error handling: propose to save in m3u8 format when unable to save in m3u (most often due to character encoding issue)</li></ul>
+</a>
+
+<br>
+<a name=version-0.3.1>
+<b>Release 0.3.1</b>
+<ul><li>Fix unswap (reactive memory) buffer</li>
+<li>Prepare for Integer Mode: update audio stream modes list upon hogging device</li></ul>
+</a>
+
+<br>
+<a name=version-0.3.0>
+<b>Release 0.3.0</b>
+New Features:<ul><li>Playlist load/save (m3u & m3u8)</li>
+			<li>Open playlists & audio file by dropping them on Audirvana icon or from the Finder ("Open With...")</li>
+			<li>Get album art image from folder.jpg (or cover.jpg) file in the audio file folder if none was present in file metadatas</li>
+			</ul>
+</a>
+
+<br>
+<a name=version-0.2.2>
+<b>Release 0.2.2</b>
+<ul><li>Opening/dropping of track folders</li>
+			<li>Background tracks insert into playlist</li>
+			<li>Fast recovering from CPU overload (scan the remainings of the audio buffer to force it to be unswapped back to RAM)</li>
+			</ul>
+</a>
+
+<br>
+<a name=version-0.2.1>
+<b>Release 0.2.1</b>
+Bug Fixes:<ul><li>Oversampling was setting incoherent file and DAC sample rates</li>
+			<li>Workaround for CoreAudio underestimation of file length that lead to a pause at end of some tracks</li>
+			</ul>
+</a>
+
+<br>
+<a name=version-0.2.0>
+<b>Release 0.2.0</b>
+<ul><li>Background tracks loading with progress bar (under the position slider).
+			Makes sample rate conversion usable, removing the long latency before playback start.</li>
+			<li>Select the highest IO buffer with a size in power of two when enablign the option. Helps removing clicking with some specific configurations.</li>
+			</ul>
+</a>
+
+<br>
+<a name=version-0.1.6>
+<b>Release 0.1.6</b>
+<ul><li>Added Prune playlist menu command: remove all playlist items except the playing track</li>
+			<li>Added option (enabled by default) to switch I/O buffer to maximum size. This maxes the latency, but minimizes the CPU load.</li>
+			<li>Fix for continuously variable sample rate devices whose only maximum sample rate was used</li>
+			</ul>
+</a>
+
+<br>
+<a name=version-0.1.5>
+<b>Release 0.1.5</b>
+First version introducing automated updates gathering (using Sparkle framework)
+</a>
+
+<br>
+<b>Release 0.1.0</b>
+Audirvana first public release!
+
+
+</body>
+</html>
